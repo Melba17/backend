@@ -1,10 +1,11 @@
 FROM node:lts-alpine
 
-ADD . /app/
 WORKDIR /app
+
+COPY ./app ./app
 
 RUN yarn
 
 EXPOSE 3000
 
-CMD ["node", "index.js"]
+CMD ["node", "app/index.js"]
