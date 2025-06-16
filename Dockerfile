@@ -2,9 +2,9 @@ FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY ./app ./app
+COPY . .
 
-RUN yarn
+RUN yarn install
 
 EXPOSE 3000
 
